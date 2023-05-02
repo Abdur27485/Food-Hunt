@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -17,7 +18,7 @@ const Navbar = () => {
                             <img src="https://play-lh.googleusercontent.com/i1qvljmS0nE43vtDhNKeGYtNlujcFxq72WAsyD2htUHOac57Z9Oiew0FrpGKlEehOvo=w240-h480-rw" />
                         </div>
                     </div>
-                    <a className="btn px-9">Login</a>
+                    <Link to='/login'>Login</Link>
                 </div>
             </div>
         </div>
