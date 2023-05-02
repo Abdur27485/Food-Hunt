@@ -31,8 +31,8 @@ const Register = () => {
         })
     }
     return (
-        <div>
-            <form onSubmit={handleRegister} className='mx-auto p-5 mt-24 bg-gray-500'>
+        <div className='p-5 mt-24 bg-gray-500'>
+            <form onSubmit={handleRegister}>
             <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Full Name</span>

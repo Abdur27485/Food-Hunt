@@ -3,7 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const { loginUser, createUser } = useContext(AuthContext);
+    const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContext);
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -13,17 +13,24 @@ const Login = () => {
         const password = form.password.value;
 
         loginUser(email, password)
-        .then( result => {
-            const userinfo = result.user;
-            console.log(userinfo)
-        })
-        .catch( error => {
-            console.log(error.message)
-        })
+            .then(result => {
+                const userinfo = result.user;
+                console.log(userinfo)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+    }
+
+    const handleGoogleSingIn = () => {
+            googleSignIn();
+    }
+    const handleGithubSignIn = () => {
+        githubSignIn();
     }
     return (
-        <div>
-            <form onSubmit={handleLogin} className='mx-auto p-5 mt-24 bg-gray-500'>
+        <div className='p-5 mt-24 bg-gray-500'>
+            <form onSubmit={handleLogin}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Email Address</span>
@@ -39,6 +46,8 @@ const Login = () => {
                 <button className='btn' type='submit'>Login</button>
                 <p>Don't have an account yet? <Link to='/register'>Register</Link></p>
             </form>
+            <button className='btn' onClick={handleGoogleSingIn}>Google</button>
+            <button className='btn' onClick={handleGithubSignIn}>Github</button>
         </div>
     );
 };
