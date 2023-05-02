@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
     return (
         <div>
             <div className="navbar bg-base-100 md:w-9/12 mx-auto">
@@ -13,12 +15,16 @@ const Navbar = () => {
                     <p>Blog</p>
                 </div>
                 <div className="navbar-end">
-                    <div className="avatar">
-                        <div className=" w-16 rounded-full">
-                            <img src="https://play-lh.googleusercontent.com/i1qvljmS0nE43vtDhNKeGYtNlujcFxq72WAsyD2htUHOac57Z9Oiew0FrpGKlEehOvo=w240-h480-rw" />
-                        </div>
-                    </div>
-                    <Link to='/login'>Login</Link>
+                    {
+                        user ?
+                            <div className="avatar tooltip tooltip-left" data-tip={user.displayName}>
+                                <div className=" w-16 rounded-full">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </div>
+                            :
+                            <Link to='/login'>Login</Link>
+                    }
                 </div>
             </div>
         </div>
