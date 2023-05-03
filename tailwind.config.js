@@ -17,7 +17,7 @@ export default {
   plugins: [require("daisyui")],
   daisyui: {
     styled: true,
-    themes: ['garden'],
+    themes: ['lemonade'],
     base: true,
     utils: true,
     logs: true,

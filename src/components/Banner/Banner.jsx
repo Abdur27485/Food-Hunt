@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 mb-20">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src="/public/assets/bannerRight.png" className="max-w-sm -rotate-90" />
                     <div>

@@ -13,7 +13,8 @@ import Register from './pages/Register/Register';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>
+    element: <Home></Home>,
+    loader: () => fetch('http://localhost:27485/chefs'),
   },
   {
     path: '/login',
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </AuthProvider>
   </React.StrictMode>,
 )
