@@ -5,8 +5,24 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        primary: '#05683B',
+        secondary: '#379683',
+        success: '#5CDB95',
+        'secondary-subtle': '#8EE4AF',
+      }
+    },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    styled: true,
+    themes: ['garden'],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: "",
+  },
 }
 

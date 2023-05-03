@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const Login = () => {
     const { loginUser, googleSignIn, githubSignIn } = useContext(AuthContext);
@@ -16,6 +16,7 @@ const Login = () => {
             .then(result => {
                 const userinfo = result.user;
                 console.log(userinfo)
+                return <Navigate to='/'></Navigate>
             })
             .catch(error => {
                 console.log(error.message)
@@ -29,13 +30,13 @@ const Login = () => {
         githubSignIn();
     }
     return (
-        <div className='p-5 mt-24 bg-gray-500'>
+        <div className='p-5 mx-5 mt-10  bg-white lg:w-1/2 lg:mx-auto rounded-3xl shadow-2xl'>
             <form onSubmit={handleLogin}>
-                <div className="form-control w-full max-w-xs">
+                <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email Address</span>
                     </label>
-                    <input type="email" name='email' placeholder="example@gmail.com" className="input input-bordered w-full max-w-xs" required />
+                    <input type="email" name='email' placeholder="example@gmail.com" className="input input-bordered w-full" required />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
