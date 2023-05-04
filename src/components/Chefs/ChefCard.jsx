@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FcLike } from "react-icons/fc";
 import { MdFastfood } from "react-icons/md";
+import { GiCook } from "react-icons/gi";
 
 const ChefCard = ({data}) => {
     const {chefName,numberOfRecipes,yearsOfExperiance,likes, id,chefPictureUrl} = data;
@@ -19,7 +20,7 @@ const ChefCard = ({data}) => {
       <div className="col-span-1 lg:col-span-9">
         <div className="text-center lg:text-left">
           <h2 className="text-2xl font-bold text-zinc-700">{chefName}</h2>
-          <p className="mt-2 font-semibold text-zinc-700">{yearsOfExperiance} Years of experiance</p>
+          <p className="mt-2 font-semibold text-zinc-700 flex gap-1 items-center"><GiCook />{yearsOfExperiance} Years of experiance</p>
         </div>
 
         <div className="mt-6 grid grid-cols-2 gap-1 text-center lg:text-left">

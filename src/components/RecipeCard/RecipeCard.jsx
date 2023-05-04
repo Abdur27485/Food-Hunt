@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReactStars from "react-rating-stars-component";
 
 const RecipeCard = ({ data }) => {
     const { recipeName, ingredients, cookingMethod, rating, recipeImage } = data;
@@ -30,15 +31,15 @@ const RecipeCard = ({ data }) => {
                 <div className="col-span-1 lg:col-span-9">
                     <div className="text-center lg:text-left">
                         <h2 className="text-2xl font-bold text-zinc-700">{recipeName}</h2>
-                        <p className="mt-2 font-semibold text-zinc-700"> {rating}</p>
+                        <p className="mt-2"><ReactStars value={rating} edit={false} size={20} /></p>
                     </div>
 
                     <div className="mt-6 grid grid-cols-1 gap-y-7 lg:grid-cols-2 text-center lg:text-left">
                         <div className='lg:mr-6'>
-                            <p className="font-bold text-zinc-700">
+                            <p className="font-bold text-zinc-700 flex gap-1 flex-wrap">
                                 <span className='text-blue-500'>Ingredients: </span>
                                 {
-                                    ingredients.map((ingredient, idx) => <span key={idx} className='mr-1'>{ingredient}</span>)
+                                    ingredients.map((ingredient, idx) => <span key={idx}>{ingredient},</span>)
                                 }
                             </p>
                         </div>
