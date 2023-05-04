@@ -15,8 +15,8 @@ const Navbar = () => {
                     <h2 className='font-bold text-2xl'>Recipe</h2>
                 </div>
                 <div className="navbar-center hidden lg:flex gap-x-5">
-                    <p>Home</p>
-                    <p>Blog</p>
+                    <Link to='/'>Home</Link>
+                    <Link to='/blog'>Blog</Link>
                 </div>
                 <div className="navbar-end">
                     {

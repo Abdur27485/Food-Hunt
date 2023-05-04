@@ -10,6 +10,7 @@ import Login from './pages/Login/Login.jsx';
 import AuthProvider from './providers/AuthProvider';
 import Register from './pages/Register/Register';
 import Chef from './pages/Chef/Chef';
+import Blog from './pages/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     path: '/chefs/:id',
     element: <Chef></Chef>,
     loader: ({params}) => fetch(`http://localhost:27485/chefs/${params.id}`)
+  },
+  {
+    path: '/blog',
+    element: <Blog></Blog>
   }
 ]);
 
