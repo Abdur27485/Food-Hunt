@@ -38,7 +38,7 @@ const RecipeCard = ({ data }) => {
                             <p className="font-bold text-zinc-700">
                                 <span className='text-blue-500'>Ingredients: </span>
                                 {
-                                    ingredients.map(ingredient => <span className='mr-1'>{ingredient}</span>)
+                                    ingredients.map((ingredient, idx) => <span key={idx} className='mr-1'>{ingredient}</span>)
                                 }
                             </p>
                         </div>

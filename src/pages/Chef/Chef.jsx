@@ -8,7 +8,6 @@ const Chef = () => {
     const data = useLoaderData();
     return (
         <div className=''>
-            <Navbar></Navbar>
             <ChefBanner data={data}></ChefBanner>
             <RecipesContainer recipesId={data.id}></RecipesContainer>
         </div>

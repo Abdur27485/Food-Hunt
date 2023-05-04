@@ -1,12 +1,12 @@
 import React from 'react';
 
 const ChefBanner = ({data}) => {
-    const {chefName,numberOfRecipes,yearsOfExperiance,likes, id, shortBio} = data;
+    const {chefName,numberOfRecipes,yearsOfExperiance,likes, id, shortBio,chefPictureUrl} = data;
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src="https://images.hellomagazine.com/horizon/43/3ee129054e2c-gettyimages-827452536.jpg" alt="Album" className="max-w-sm rounded-lg shadow-2xl" />
+                    <img src={chefPictureUrl} alt="Album" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-5xl font-bold">{chefName}</h1>
                         <p className="py-6">{shortBio}</p>

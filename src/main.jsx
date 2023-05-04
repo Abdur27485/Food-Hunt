@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home/Home.jsx';
@@ -12,29 +13,36 @@ import Register from './pages/Register/Register';
 import Chef from './pages/Chef/Chef';
 import Blog from './pages/Blog/Blog';
 import NotFound from './pages/NotFound/NotFound';
+import Main from './layout/Main';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home></Home>,
-    loader: () => fetch('https://recipe-chef-server-abdur27485.vercel.app/chefs'),
-  },
-  {
-    path: '/login',
-    element: <Login></Login>
-  },
-  {
-    path: '/register',
-    element: <Register></Register>
-  },
-  {
-    path: '/chefs/:id',
-    element: <Chef></Chef>,
-    loader: ({ params }) => fetch(`https://recipe-chef-server-abdur27485.vercel.app/chefs/${params.id}`)
-  },
-  {
-    path: '/blog',
-    element: <Blog></Blog>
+    path: '/',
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch('https://recipe-chef-server-abdur27485.vercel.app/chefs'),
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
+        path: '/chefs/:id',
+        element: <Chef></Chef>,
+        loader: ({ params }) => fetch(`https://recipe-chef-server-abdur27485.vercel.app/chefs/${params.id}`),
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
+      },
+    ]
   },
   {
     path: '*',
