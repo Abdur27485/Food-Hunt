@@ -1,9 +1,23 @@
 import React from 'react';
-import { FcLike } from 'react-icons/fc';
-import { MdFastfood } from 'react-icons/md';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RecipeCard = ({ data }) => {
-    const { recipeName, ingredients, cookingMethod, rating, recipeImage } = data
+    const { recipeName, ingredients, cookingMethod, rating, recipeImage } = data;
+
+    const notify = (event) => {
+    event.target.disabled= true;
+        return toast('Added To Favourite.', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        })
+    }
     return (
         <div className="rounded-xl border bg-slate-200 border-slate-400 p-6">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
@@ -24,23 +38,24 @@ const RecipeCard = ({ data }) => {
                             <p className="font-bold text-zinc-700">
                                 <span className='text-blue-500'>Ingredients: </span>
                                 {
-                                    ingredients.map( ingredient => <span className='mr-1'>{ingredient}</span>)
+                                    ingredients.map(ingredient => <span className='mr-1'>{ingredient}</span>)
                                 }
-                                </p>
+                            </p>
                         </div>
 
                         <div>
                             <p className="font-bold text-zinc-700">
                                 <span className='text-blue-500'>How to cook: </span>
-                                {cookingMethod.length > 350 ? <> {cookingMethod.slice(0,350)}... </> : cookingMethod }
+                                {cookingMethod.length > 350 ? <> {cookingMethod.slice(0, 350)}... </> : cookingMethod}
                             </p>
                         </div>
                     </div>
                     <div className="mt-6">
-                        <button className=" w-2/3 mx-auto block text-center rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">Add To Favourite</button>
+                        <button className=" w-2/3 mx-auto block text-center rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white disabled:bg-blue-300" onClick={notify}>Add To Favourite</button>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
