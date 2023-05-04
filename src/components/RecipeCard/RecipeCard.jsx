@@ -24,7 +24,7 @@ const RecipeCard = ({ data }) => {
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
                 <div className="grid-cols-1 lg:col-span-3 overflow-hidden">
                     <div className="flex items-center h-[300px] overflow-hidden">
-                        <img src='https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-64.jpg' className='' />
+                        <img src={recipeImage} className='w-full h-full' />
                     </div>
                 </div>
 
