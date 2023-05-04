@@ -7,4 +7,4 @@
 5. All the recipes are tasty as well as healthy too.
 
 --------------------------------------------------------
-#### Live Site Link: [Recipe Hunt](http://devsonket.com)
+#### Live Site Link: [Recipe Hunt](https://food-hunt27485.netlify.app/)
