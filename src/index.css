@@ -13,7 +13,9 @@
     outline: 1px solid green;
 } */
 
-
+.active {
+    background-color: rgb(203 213 225) !important;
+}
 .card-image{
     width: 120px;
     height: 120px;
