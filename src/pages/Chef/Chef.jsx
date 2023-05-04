@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import ChefBanner from '../../components/ChefBanner/ChefBanner';
 import { useLoaderData } from 'react-router-dom';
-import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import RecipesContainer from '../../components/RecipesContainer/RecipesContainer';
 
 const Chef = () => {
@@ -11,7 +10,7 @@ const Chef = () => {
         <div className='bg-slate-400'>
             <Navbar></Navbar>
             <ChefBanner data={data}></ChefBanner>
-            <RecipesContainer></RecipesContainer>
+            <RecipesContainer recipesId={data.id}></RecipesContainer>
         </div>
     );
 };
