@@ -28,12 +28,12 @@ const ChefCard = ({data}) => {
           </div>
 
           <div>
-            <p className="font-bold text-zinc-700 flex gap-1 items-center"><MdFastfood className='text-orange-600' />{numberOfRecipes}</p>
+            <p className="font-bold text-zinc-700 flex gap-1 items-center"><MdFastfood className='text-orange-600' />{numberOfRecipes} Recipes</p>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link to={`/chefs/${id}`} className=" w-2/3 mx-auto block text-center rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">View Profile</Link>
+          <Link to={`/chefs/${id}`} className=" w-2/3 mx-auto block text-center rounded-xl border-2 border-blue-500 bg-white px-3 py-2 font-semibold text-blue-500 hover:bg-blue-500 hover:text-white">View Recipes</Link>
         </div>
       </div>
     </div>
