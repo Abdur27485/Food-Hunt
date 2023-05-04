@@ -36,7 +36,7 @@ const Navbar = () => {
                         user ? <>
                             <div className="avatar tooltip tooltip-left" data-tip={user.displayName}>
                                 <div className=" w-16 rounded-full">
-                                    <img src={user.photoURL} />
+                                    <img src={user.photoURL ? user.photoURL : 'https://media.istockphoto.com/id/1214428300/vector/default-profile-picture-avatar-photo-placeholder-vector-illustration.jpg?s=612x612&w=0&k=20&c=vftMdLhldDx9houN4V-g3C9k0xl6YeBcoB_Rk6Trce0='} />
                                 </div>
                             </div>
                             <button className="btn ms-3" onClick={handleLogOut}>Log Out</button>
