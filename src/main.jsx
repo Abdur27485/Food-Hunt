@@ -15,6 +15,7 @@ import Blog from './pages/Blog/Blog';
 import NotFound from './pages/NotFound/NotFound';
 import Main from './layout/Main';
 import PrivateRoute from './routes/PrivateRoute';
+import PrivateRouteChef from './routes/PrivateRouteChef';
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/register',
-        element: <Register></Register>
+        element: <PrivateRoute><Register></Register></PrivateRoute>
       },
       {
         path: '/chefs/:id',
-        element: <Chef></Chef>,
+        element: <PrivateRouteChef><Chef></Chef></PrivateRouteChef>,
         loader: ({ params }) => fetch(`https://recipe-chef-server-abdur27485.vercel.app/chefs/${params.id}`),
       },
     ]
