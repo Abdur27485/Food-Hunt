@@ -6,7 +6,7 @@ const ChefsCardContainer = () => {
     const data = useLoaderData();
     console.log(data)
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-10 mx-3 md:w-9/12 md:mx-auto'>
+        <div id='chefs' className='grid grid-cols-1 md:grid-cols-2 gap-5 mx-5'>
             {
                 data.map( chef => <ChefCard key={chef.id} data={chef}></ChefCard>)
             }

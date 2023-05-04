@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero-section{
+    background-image: url('/public/assets/hero-bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+}
+
+.card-image{
+    width: 120px;
+    height: 120px;
+}
