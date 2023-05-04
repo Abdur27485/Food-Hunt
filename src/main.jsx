@@ -14,6 +14,7 @@ import Chef from './pages/Chef/Chef';
 import Blog from './pages/Blog/Blog';
 import NotFound from './pages/NotFound/NotFound';
 import Main from './layout/Main';
+import PrivateRoute from './routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <Login></Login>
+        element: <PrivateRoute><Login></Login></PrivateRoute>
       },
       {
         path: '/register',
