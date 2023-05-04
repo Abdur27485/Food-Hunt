@@ -7,7 +7,8 @@ import { FiLogIn } from "react-icons/fi";
 
 
 const Navbar = () => {
-    const { user, logOutUser } = useContext(AuthContext);
+    const { user, logOutUser,nameAndPic } = useContext(AuthContext);
+    console.log(nameAndPic)
 
     const handleLogOut = () => {
         logOutUser();

@@ -61,11 +61,11 @@ const Login = () => {
                     <p className='px-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl bg-white'>or</p>
                     <hr className='bg-slate-950 h-[1.5px]' />
                 </div>
-                <div className='flex flex-wrap gap-x-10 gap-y-5 justify-center'>
+            </form>
+            <div className='flex flex-wrap gap-x-10 gap-y-5 justify-center'>
                 <button className='btn bg-transparent text-slate-950 hover:bg-slate-300 px-5 lg:px-10' onClick={handleGoogleSingIn}>Google</button>
                 <button className='btn bg-transparent text-slate-950 hover:bg-slate-300 px-5 lg:px-10' onClick={handleGithubSignIn}>Github</button>
             </div>
-            </form>
         </div>
     );
 };
