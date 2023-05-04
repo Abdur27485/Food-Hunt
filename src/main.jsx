@@ -11,6 +11,7 @@ import AuthProvider from './providers/AuthProvider';
 import Register from './pages/Register/Register';
 import Chef from './pages/Chef/Chef';
 import Blog from './pages/Blog/Blog';
+import NotFound from './pages/NotFound/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: '/blog',
     element: <Blog></Blog>
+  },
+  {
+    path: '*',
+    element: <NotFound></NotFound>
   }
 ]);
 
