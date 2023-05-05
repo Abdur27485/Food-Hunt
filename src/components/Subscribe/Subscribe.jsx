@@ -13,15 +13,13 @@ const Subscribe = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center mt-5 lg:mt-0'>
-                    <div className="form-control">
-                        <div className="input-group">
-                            <input type="text" placeholder="example@gmail.com" className="input input-bordered" />
-                            <button className="btn">Subscribe</button>
+                    <div className="flex flex flex-wrap justify-center gap-5">
+                            <input type="text" placeholder="example@gmail.com" className="input rounded-none" />
+                            <button className="btn rounded-none">Subscribe</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 
