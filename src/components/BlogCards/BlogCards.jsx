@@ -5,7 +5,7 @@ const BlogCards = () => {
     return (
         <div>
             <div className='flex justify-center'>
-            <Pdf targetRef={ref}filename="div-blue.pdf" x={0} y={0} scale={0.55}>
+            <Pdf targetRef={ref}filename="blog.pdf" x={0} y={0} scale={0.55}>
                 {({ toPdf }) => <button onClick={toPdf} className='btn' >Download Pdf</button>}
             </Pdf>
             </div>
