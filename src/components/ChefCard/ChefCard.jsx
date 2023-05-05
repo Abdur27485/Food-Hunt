@@ -9,7 +9,7 @@ const ChefCard = ({data}) => {
 
     return (
 
-  <div className="rounded-xl border bg-slate-100 border-slate-400 p-6">
+  <div className="rounded-xl glass border-slate-400 p-6">
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
       <div className="grid-cols-1 lg:col-span-3">
         <div className="mx-auto flex items-center justify-center">

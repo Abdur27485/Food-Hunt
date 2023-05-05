@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Banner from '../../components/Banner/Banner';
-import ChefsCardContainer from '../../components/Chefs/ChefsCardContainer';
+import ChefsCardContainer from '../../components/ChefsCardContainer/ChefsCardContainer';
 import Footer from '../../components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import RecipeCategories from '../../components/RecipeCategories/RecipeCategories';
