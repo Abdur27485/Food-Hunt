@@ -5,6 +5,7 @@ import ChefsCardContainer from '../../components/Chefs/ChefsCardContainer';
 import Footer from '../../components/Footer/Footer';
 import { Outlet } from 'react-router-dom';
 import RecipeCategories from '../../components/RecipeCategories/RecipeCategories';
+import Subscribe from '../../components/Subscribe/Subscribe';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <ChefsCardContainer></ChefsCardContainer>
             <RecipeCategories></RecipeCategories>
+            <Subscribe></Subscribe>
         </div>
     );
 };

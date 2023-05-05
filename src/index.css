@@ -26,3 +26,9 @@
     background-position: center;
     transition: transform .2s ease;
 }
+.newsletterBg{
+    background-image: url('/public/assets/newsletter.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
