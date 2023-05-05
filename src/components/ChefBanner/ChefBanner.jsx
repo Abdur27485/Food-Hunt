@@ -9,11 +9,11 @@ const ChefBanner = ({data}) => {
         <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={chefPictureUrl} alt="Album" className="max-w-sm rounded-lg shadow-2xl" />
+                    <img src={chefPictureUrl} alt="Album" className="rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-5xl font-bold">{chefName}</h1>
                         <p className="py-6">{shortBio}</p>
-                        <div className='flex gap-5 justify-around bg-slate-300 px-4 py-3 rounded-3xl'>
+                        <div className='flex flex-wrap gap-5 justify-around bg-slate-300 px-4 py-3 rounded-3xl'>
                             <p className='flex gap-1 items-center text-zinc-700'><GiCook />{yearsOfExperiance} Years of experiance</p>
                             <p className='flex gap-1 items-center text-zinc-700'><FcLike />{likes} Likes</p>
                             <p className='flex gap-1 items-center text-zinc-700'><MdFastfood className='text-orange-600' />{numberOfRecipes} Recipes</p>
