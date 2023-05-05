@@ -9,7 +9,7 @@ import Subscribe from '../../components/Subscribe/Subscribe';
 
 const Home = () => {
     return (
-        <div className='mb-10'>
+        <div>
             <Banner></Banner>
             <ChefsCardContainer></ChefsCardContainer>
             <RecipeCategories></RecipeCategories>
